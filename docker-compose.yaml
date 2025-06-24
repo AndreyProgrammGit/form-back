@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: ${ROOT}
+      POSTGRES_PASSWORD: ${PASSWORD}
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - form-generator
+
+volumes:
+  postgres_data:
+
+networks:
+  form-generator:
