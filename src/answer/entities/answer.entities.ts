@@ -5,7 +5,7 @@ import {
   CreateDateColumn,
   ManyToOne,
 } from 'typeorm';
-import { Question } from './question.entities';
+import { Question } from '../../question/entities/question.entities';
 
 @Entity()
 export class Answer {
